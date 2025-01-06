@@ -1,0 +1,24 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<div class="container">
+    <div class="content">
+        <h1>TODO 登録</h1>
+        <form action="{% url 'todo:create' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="title">
+            <input type="submit" name="登録">
+        </form>
+        <hr />
+    </div>
+
+    <div class="content">
+        <h1>TODO一覧</h1>
+        {% for todo in todos %}
+        <span>{{todo.id}}</span><span>{{todo.title}}</span>
+        
+
+
+
+</div>

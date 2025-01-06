@@ -1,0 +1,68 @@
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body全体の基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* コンテナスタイル */
+.container {
+    width: 80%;
+    /* 幅を画面幅の80%に設定 */
+    max-width: 1200px;
+    /* 最大幅を1200pxに設定 */
+    margin: 0 auto;
+    /* 水平方向に中央寄せ */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* 角を丸める */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 軽い影をつける */
+}
+
+/* コンテントエリアスタイル */
+.content {
+    padding: 20px;
+    color: #333;
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: #007BFF;
+    /* 見出しの色を青に */
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        /* モバイルで幅を95%に */
+        padding: 15px;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+        /* モバイル用に見出しのフォントサイズを小さく */
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        /* モバイル用に段落のフォントサイズを小さく */
+    }
+}

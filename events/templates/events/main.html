@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>調整</title>
+</head>
+
+<body>
+    <h1>スケジュール調整アプリ</h1>
+    <form action="{% url 'event:create' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="title">
+        <input type="submit" name="登録">
+    </form>
+
+    {% for event in all_event %}
+    {{ event.description }}
+    {{ event.events_title }} <br>
+    {% endfor %}
+</body>
+
+</html>
